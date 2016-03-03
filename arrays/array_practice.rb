@@ -19,11 +19,11 @@ puts "The second last element is #{array[8]}"
 # The first four elements are '1, 2, 3, 4'
 puts "The first four elements are '#{array.take(4).to_s.tr('[]',"")}'"
 # If we delete 5, 6 and 7 from the array, we're left with [1,2,3,4,8,9,10]
-puts "If we delete #{array.delete_at(4)}, #{array.delete_at(4)} and #{array.delete_at(4)} from the array,  we're left with #{array} "
+puts "If we delete #{array.delete_at(4)}, #{array.delete_at(4)} and #{array.delete_at(4)} from the array,  we're left with [#{array.join(",")}] "
 # If we add 5 at the beginning of the array, we're left with [5,1,2,3,4,8,9,10]
-puts "If we add 5 at the beginning of the array, we're left with #{array.unshift(5)}"
+puts "If we add 5 at the beginning of the array, we're left with [#{array.unshift(5).join(",")}]"
 # If we add 6 at the end of the array, we're left with [5,1,2,3,4,8,9,10,6]
-puts "If we add 6 at the end of the array, we're left with #{array.push(6)}"
+puts "If we add 6 at the end of the array, we're left with [#{array.push(6).join(",")}]"
 # Only the elements [9, 10] are > 8.
 puts "Only the elements #{array.select { |a| a > 8 }} are > 8"
 # If we remove all the elements, then the length of the array is 0
