@@ -11,5 +11,5 @@ while count != 100
     puts "Buzz"
   else
     puts count
-end
+  end
 end
