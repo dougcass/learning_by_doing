@@ -11,7 +11,7 @@ class Bartender
     if @count < 5
       @count += 1
     else
-      self.cutoff
+      cutoff
     end
   end
 
