@@ -1,4 +1,4 @@
-#!/usr/bin/env/ruby
+#!/usr/bin/env ruby
 
 fizz_buzz_array = []
 count = 0
@@ -16,4 +16,5 @@ while count != 100
 end
 
 puts fizz_buzz_array
+
 
