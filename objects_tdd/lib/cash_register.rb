@@ -1,4 +1,4 @@
-# Missing top level
+# !usr/bin/env ruby
 class CashRegister
   attr_reader :total
 
@@ -11,12 +11,8 @@ class CashRegister
   end
 
   def payment(amount)
-     @total -= amount
-    if @total < 0.0
-      puts "Your change is $#{@total}."
-    else
-      puts 'Thank you for your purchase.'
-    end
+    @total -= amount
+    return "Your change is $#{'%.2f' % @total.abs}." if @total < 0.0
   end
 end
 

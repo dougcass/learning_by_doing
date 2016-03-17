@@ -25,8 +25,8 @@ describe CashRegister do
 
     context 'if payment amount > than total amount' do
       it 'should return a string that indicates the amount of change' do
-        subject.purchase(3.00)
-        expect(subject.payment(5.00)).to eq('Your change is $2.00')
+        subject.purchase(3)
+        expect(subject.payment(5)).to eq('Your change is $2.00.')
       end
     end
   end
