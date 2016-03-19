@@ -5,30 +5,36 @@ describe Bartender do
   it 'should be a Bartender' do
     expect(subject).to be_a(Bartender)
   end
-end
 
-#   describe '#total' do
-#     it 'should return 0 for new CashRegister' do
-#       expect(subject.total).to eq(0)
-#     end
-#   end
-#   describe '#purchase(amount)' do
-#     it 'should add the purchase amount to the total' do
-#       subject.purchase(3.00)
-#       expect(subject.total).to eq(3.00)
-#     end
-#   end
-#   describe '#payment(amount)' do
-#     it 'should subtract the payment amount from the total' do
-#       subject.payment(3.00)
-#       expect(subject.total).to eq(-3)
-#     end
-#
-#     context 'if payment amount > than total amount' do
-#       it 'should return a string that indicates the amount of change' do
-#         subject.purchase(3)
-#         expect(subject.payment(5)).to eq('Your change is $2.00.')
-#       end
-#     end
-#   end
-# end
+  describe '#start' do
+    it 'should start a count' do
+      expect(subject.start).to eq(0)
+    end
+  end
+
+  describe '#hello' do
+    it 'should say hello' do
+      expect(subject.hello).to eq('Hi. What would you like to drink?')
+    end
+  end
+
+  describe '#pour' do
+    it 'should pour a drink' do
+      subject.start
+      expect(subject.pour).to eq(1)
+    end
+
+    context 'if count = 6' do
+      it 'it should say that your are cutoff' do
+        subject.start
+        subject.pour
+        subject.pour
+        subject.pour
+        subject.pour
+        subject.pour
+        subject.pour
+        expect(subject.pour).to eq('Sorry. No more for you today.')
+      end
+    end
+  end
+end
