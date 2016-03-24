@@ -18,10 +18,10 @@ class CashRegister
   def pay(tender)
     change = tender - @total
     if change < 0
-      puts 'Your new total is $' + '%.2f' % change.abs
+      puts "Your new total is $#{format('%.2f', change.abs)}"
       @total = change.abs
     else
-      puts 'Your change is $' + '%.2f' % change
+      puts "Your change is $#{format('%.2f', change)}"
     end
   end
 
