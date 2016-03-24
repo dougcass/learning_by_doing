@@ -19,7 +19,8 @@ puts "The second from last element is #{array[8]}"
 # The first four elements are '1, 2, 3, 4'
 puts "The first four elements are '#{array.take(4).to_s.tr('[]',"")}'"
 # If we delete 5, 6 and 7 from the array, we're left with [1,2,3,4,8,9,10]
-puts "If we delete #{array.delete_at(4)}, #{array.delete_at(4)} and #{array.delete_at(4)} from the array, we're left with [#{array.join(",")}] "
+#puts "If we delete #{array.delete_at(4)}, #{array.delete_at(4)} and #{array.delete_at(4)} from the array, we're left with [#{array.join(",")}] "
+puts "If we delete 5, 6 and 7 from the array, we're left with [#{array.delete_if{|array| array >4 && array < 8}.join(",")}] "
 # If we add 5 at the beginning of the array, we're left with [5,1,2,3,4,8,9,10]
 puts "If we add 5 at the beginning of the array, we're left with [#{array.unshift(5).join(",")}]"
 # If we add 6 at the end of the array, we're left with [5,1,2,3,4,8,9,10,6]
