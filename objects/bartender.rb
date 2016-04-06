@@ -20,4 +20,17 @@ class Bartender
   end
 end
 
+bartender = Bartender.new
+
+bartender.pour
+bartender.pour
+bartender.pour
+bartender.pour
+bartender.pour
+bartender.pour
+
+
+
+
+
 
