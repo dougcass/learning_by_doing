@@ -27,12 +27,8 @@ describe Bartender do
     context 'if count = 6' do
       it 'it should say that your are cutoff' do
         subject.start
-        subject.pour
-        subject.pour
-        subject.pour
-        subject.pour
-        subject.pour
-        subject.pour
+        5.times { subject.pour }
+
         expect(subject.pour).to eq('Sorry. No more for you today.')
       end
     end
